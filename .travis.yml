@@ -10,7 +10,7 @@ install:
   - npm install
 script:
   # ここではtextlintでチェックしてるだけ
-  - $(npm bin)/textlint README.md
+  - $(npm bin)/textlint textlint.md
 after_failure:
   # テストが落ちた = textlintで見つかるエラーがある
   # PRの時のみreviewdogでレビューコメントを書き込む
