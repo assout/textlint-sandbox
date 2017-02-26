@@ -11,7 +11,8 @@ install:
 script:
   # ここではtextlintでチェックしてるだけ
   # - $(npm bin)/textlint textlint.md
-  - $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
+  - >-
+    $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
 # after_failure:
   # テストが落ちた = textlintで見つかるエラーがある
   # PRの時のみreviewdogでレビューコメントを書き込む
