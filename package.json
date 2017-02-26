@@ -31,6 +31,12 @@
   "homepage": "https://github.com/assout/textlint-sandbox",
   "devDependencies": {
     "textlint": "^7.2.1",
-    "textlint-rule-no-todo": "^2.0.0"
+    "textlint-rule-no-todo": "^2.0.0",
+    "textlint-rule-common-misspellings": "*",
+    "textlint-rule-ja-no-redundant-expression": "*",
+    "textlint-rule-max-length-of-title": "*",
+    "textlint-rule-no-dropping-the-ra": "*",
+    "textlint-rule-no-start-duplicated-conjunction": "*",
+    "textlint-rule-preset-ja-technical-writing": "*"
   }
 }
