@@ -1,4 +1,4 @@
-# textlint
+# textlint [![Build Status](https://travis-ci.org/assout/textlint-sandbox.svg?branch=master)](https://travis-ci.org/assout/textlint-sandbox)
 
 ## ja-no-weak-phrase - 弱い表現の利用を禁止
 
