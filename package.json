@@ -1,0 +1,36 @@
+{
+  "directories": {
+    "test": "test"
+  },
+  "author": "assout",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "name": "textlint-sandbox",
+  "version": "1.0.0",
+  "description": "textlint project + reviewdog example project",
+  "main": "lib/textlint-reviewdog-example.js",
+  "scripts": {
+    "test": "textlint textlint.md"
+  },
+  "keywords": [
+    "textlint",
+    "review",
+    "github"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/assout/textlint-sandbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/assout/textlint-sandbox/issues"
+  },
+  "homepage": "https://github.com/assout/textlint-sandbox",
+  "devDependencies": {
+    "textlint": "^7.2.1",
+    "textlint-rule-no-todo": "^2.0.0"
+  }
+}
