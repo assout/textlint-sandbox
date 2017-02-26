@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js: "stable"
+env:
+  - REVIEWDOG_VERSION=0.9.5
+install:
+  # reviewdogのバイナリを落としてパスを通す
+  - mkdir -p ~/bin/ && export export PATH="~/bin/:$PATH"
+  - curl -fSL https://github.com/haya14busa/reviewdog/releases/download/$REVIEWDOG_VERSION/reviewdog_linux_amd64 -o ~/bin/reviewdog && chmod +x ~/bin/reviewdog
+  - npm install
+script:
+  # ここではtextlintでチェックしてるだけ
+  # - $(npm bin)/textlint textlint.md
+  - $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
+# after_failure:
+  # テストが落ちた = textlintで見つかるエラーがある
+  # PRの時のみreviewdogでレビューコメントを書き込む
+<<<<<<< HEAD
+  # - test $TRAVIS_PULL_REQUEST && $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
+=======
+  - test $TRAVIS_PULL_REQUEST && $(npm bin)/textlint -f checkstyle textlint.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
+>>>>>>> e00877055e2b3cc5b70333bdc4d53036a62d2358
