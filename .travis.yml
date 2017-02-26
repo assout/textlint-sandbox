@@ -10,7 +10,7 @@ install:
   - npm install
 script:
   - echo "${TRAVIS_PULL_REQUEST}"
-  - test "${TRAVIS_PULL_REQUEST}" =  "false" && $(npm bin)/textlint README.md
-  - test "${TRAVIS_PULL_REQUEST}" != "false" && $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
-
+  - $(npm bin)/textlint README.md
+after_failure:
+  - test "$TRAVIS_PULL_REQUEST" && $(npm bin)/textlint -f checkstyle README.md | reviewdog -f=checkstyle -name="textlint" -ci="travis"
 
