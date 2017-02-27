@@ -6,13 +6,13 @@
 
 Ref. [GitHub - textlint-ja/textlint-rule-ja-no-weak-phrase: 弱い表現の利用を禁止するtextlintルール](https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase)
 
-- NG: 嬉しいと思う
-- OK: 嬉しい
+- NG: 嬉しいと思う。
+- OK: 嬉しい。
 
 ## ja-no-redundant-expression - 冗長な表現を禁止
 
 Ref. [textlint-ja/textlint-rule-ja-no-redundant-expression: 冗長な表現を禁止するtextlintルール](https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression)
 
-- NG: チェックをすることができる。
-- OK: チェックできる。
+- NG: チェックをすることができる
+- OK: チェックできる
 
